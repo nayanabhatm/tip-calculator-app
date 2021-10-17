@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <p>SPLI</p>
+      <p>TTER</p>
+    </header>
+
+    <main>
+      <form action="#" id="tip-calculator">
+        <section class="user-input">
+          <div class="bill">
+            <p>Bill</p>
+            <div class="bill-amount-input">
+              <img
+                src="images/icon-dollar.svg"
+                alt="dollar"
+                aria-hidden="true"
+              />
+              <input type="number" name="bill" id="bill" placeholder="0" />
+            </div>
+          </div>
+
+          <div class="tips">
+            <p>Select Tip %</p>
+            <div class="tips-percent">
+              <input type="button" value="5%" />
+              <input type="button" value="10%" />
+              <input type="button" value="15%" />
+              <input type="button" value="25%" />
+              <input type="button" value="50%" />
+              <input
+                type="button"
+                value="Custom"
+                placeholder="0"
+                name="custom"
+              />
+            </div>
+          </div>
+
+          <div class="no-of-people">
+            <p>Number of People</p>
+            <div class="people-count-input">
+              <img
+                src="images/icon-person.svg"
+                alt="person"
+                aria-hidden="true"
+              />
+              <input
+                type="number"
+                name="people-count"
+                id="people-count"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </section>
+
+        <div class="calculated-amount">
+          <div class="tip-amount">
+            <div class="tip-label">
+              <h4>Tip Amount</h4>
+              <p>/person</p>
+            </div>
+            <h2>$0.0</h2>
+          </div>
+          <div class="total-amount">
+            <div class="totol-label">
+              <h4>Total</h4>
+              <p>/person</p>
+            </div>
+            <h2>$0.0</h2>
+          </div>
+          <button type="reset">RESET</button>
+        </div>
+      </form>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

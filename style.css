@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan1: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan-header: hsl(185, 32%, 75%);
+  --light-grayish-cyan1: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  background-color: var(--light-grayish-cyan-header);
+  font-family: "Space Mono", monospace;
+}
+
+p {
+  color: var(--very-dark-cyan);
+}
+
+/* Header */
+header {
+  text-align: center;
+  letter-spacing: 1.5px;
+  padding: 5%;
+  font-weight: 700;
+}
+
+header p:first-child {
+  margin-top: 0;
+}
+
+/* Main */
+main {
+  padding: 7%;
+  border-radius: 20px 20px 0 0;
+  background-color: var(--white);
+}
+
+/* bill AND no-of-people  */
+.bill-amount-input input,
+.people-count-input input {
+  cursor: pointer;
+  background-color: var(--light-grayish-cyan1);
+  border: none;
+  padding: 4%;
+  border-radius: 5px;
+  width: 90%;
+  text-align: right;
+  font-size: 24px;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+}
+
+.bill-amount-input input::placeholder,
+.people-count-input input::placeholder {
+  color: var(--dark-grayish-cyan);
+}
+
+.bill-amount-input,
+.people-count-input {
+  position: relative;
+}
+
+.bill-amount-input img,
+.people-count-input img {
+  position: absolute;
+  left: 2%;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+/* tips-percent */
+.tips-percent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tips-percent > * {
+  text-align: center;
+  background-color: var(--very-dark-cyan);
+  padding: 5%;
+  margin: 3% 3% 3% 0;
+  color: var(--white);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+.tips-percent .active {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+/* calculated-amount */
+.calculated-amount {
+  background-color: var(--very-dark-cyan);
+  margin: 5% 0%;
+  padding: 5%;
+  border-radius: 10px;
+  color: var(--white);
+}
+
+.calculated-amount .tip-amount,
+.calculated-amount .total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculated-amount .tip-amount h4,
+.calculated-amount .total-amount h4 {
+  margin-bottom: 0;
+}
+
+.calculated-amount .tip-amount p,
+.calculated-amount .total-amount p {
+  margin-top: 0;
+  color: var(--light-grayish-cyan);
+}
+
+.calculated-amount .tip-amount h2,
+.calculated-amount .total-amount h2 {
+  color: var(--strong-cyan);
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.calculated-amount button {
+  border: none;
+  padding: 4%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+}
+
+/* Media Queries  */
+@media all and (min-width: 1000px) {
+  #tip-calculator {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  main {
+    overflow: hidden;
+    min-width: 50%;
+    margin: 0 15%;
+    padding: 3%;
+    border-radius: 20px;
+  }
+
+  .tips-percent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tips-percent > * {
+    width: 100px;
+    height: 30px;
+  }
+
+  .calculated-amount {
+    min-width: 30%;
+    margin: 0% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
